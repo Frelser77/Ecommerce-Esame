@@ -1,0 +1,36 @@
+﻿.articoli-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.articolo {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.articolo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.articoli-container:hover .producat {
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
+a {
+    text-decoration: none;
+}
+    
+a:hover h2 {
+    text-decoration: underline;
+}
+
+.logo-pstn {
+    top: 25px;
+    left: 40px;
+    z-index: 2;
+}

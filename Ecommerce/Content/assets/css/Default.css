@@ -34,3 +34,12 @@ a:hover h2 {
     left: 40px;
     z-index: 2;
 }
+
+.my-op {
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.my-op:hover {
+    opacity: 1;
+}

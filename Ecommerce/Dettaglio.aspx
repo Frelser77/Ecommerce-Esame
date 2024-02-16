@@ -4,7 +4,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-6 offset-3 mt-5">
+            <div class="col-6 offset-3 mt-2">
 
                 <div class="card shadow">
                     <div class="card-body position-relative">
@@ -18,7 +18,7 @@
 
                     <div class="col ">
 
-                        <div class="card h-100 border-0 shadow p-2  position-relative">
+                        <div class="card h-100 border-0 shadow p-2 position-relative">
                             <div class="card-body">
                                 <asp:Label ID="lblNome" CssClass="card-title fs-3 fw-bold" runat="server"></asp:Label>
                                 <br />

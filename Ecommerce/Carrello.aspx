@@ -5,53 +5,35 @@
         <div class="container">
             <h2>Il tuo carrello</h2>
             <asp:Literal ID="ltMessaggioCarrelloVuoto" runat="server"></asp:Literal>
+           <div class="row">
             <asp:Repeater ID="rptCarrello" runat="server">
-                <HeaderTemplate>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Articolo</th>
-                                <th>Nome</th>
-                                <th>Quantitá</th>
-                                <th>Prezzo</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                </HeaderTemplate>
-
                 <ItemTemplate>
-                    <tr>
-                        <td class="text-center align-middle">
-                            <a href="Dettaglio.aspx?id=<%# Eval("Articolo.Id") %>">
-                                <img src='<%# Eval("Articolo.ImmaginePath") %>' alt='<%# Eval("Articolo.Nome") %>' class="img-thumbnail border-0" style="height: 80px; width: 80px; object-fit: cover;" />
-                            </a>
-                        </td>
-                        <td class="align-middle"><%# Eval("Articolo.Nome") %></td>
-                        <td class="align-middle"><%# Eval("Quantita") %>x</td>
-                        <td class="align-middle">€<%# Eval("PrezzoTotale", "{0:F2}") %></td>
-                        <td class="text-center align-middle">
-                            <asp:LinkButton ID="lnkRimuovi" CommandArgument='<%# Eval("Articolo.Id") %>' runat="server" OnCommand="LnkRimuovi_Command" CssClass="btn btn-outline-danger btn-sm">Rimuovi</asp:LinkButton>
-                        </td>
-                    </tr>
-                </ItemTemplate>
-
-
-
-                <FooterTemplate>
-                    </tbody>
-                        </table>
-                        <div class="row">
-                            <div class="col-md-12 text-right d-flex align-content-center justify-content-between">
-                                <h5>Totale Carrello: </h5>
-                                <asp:Literal ID="ltTotaleCarrello" runat="server"></asp:Literal>
+                   
+                    <div class="col-lg-6 col-md-12 mb-4">
+                        <div class="card mb-3 h-100">
+                            <div class="row g-0">
+                                <div class="col-md-4 d-flex align-items-center justify-content-center">
+                                    <a href="Dettaglio.aspx?id=<%# Eval("Articolo.Id") %>">
+                                        <img src='<%# Eval("Articolo.ImmaginePath") %>' alt='<%# Eval("Articolo.Nome") %>' class="img-fluid rounded-start" />
+                                    </a>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><%# Eval("Articolo.Nome") %></h5>
+                                        <p class="card-text">Quantità: <%# Eval("Quantita") %>x</p>
+                                        <p class="card-text">Prezzo: €<%# Eval("PrezzoTotale", "{0:F2}") %></p>
+                                        <asp:LinkButton ID="lnkRimuovi" CommandArgument='<%# Eval("Articolo.Id") %>' runat="server" OnCommand="LnkRimuovi_Command" CssClass="btn btn-outline-danger">Rimuovi</asp:LinkButton>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                </FooterTemplate>
-
-
+                    </div>
+                </ItemTemplate>
             </asp:Repeater>
-            <asp:Button ID="btnSvuotaCarrello" runat="server" CssClass="btn btn-danger btn-sm" OnClick="BtnSvuotaCarrello_Click" Text="Svuota Carrello" />
+           </div>
+            <asp:Button ID="btnSvuotaCarrello" runat="server" CssClass="btn btn-danger" OnClick="BtnSvuotaCarrello_Click" Text="Svuota Carrello" />
         </div>
     </main>
 </asp:Content>
+
+

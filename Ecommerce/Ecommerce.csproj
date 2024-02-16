@@ -102,9 +102,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
     <Content Include="Carrello.aspx" />
-    <Content Include="Contact.aspx" />
     <Content Include="Content\assets\css\Carrello.css" />
     <Content Include="Content\assets\css\Default.css" />
     <Content Include="Content\assets\css\Dettagli.css" />
@@ -203,13 +201,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Carrello.aspx.cs">
       <DependentUpon>Carrello.aspx</DependentUpon>
@@ -228,13 +219,6 @@
     <Compile Include="Static\Articolo.cs" />
     <Compile Include="Static\Carrello.cs" />
     <Compile Include="Static\Magazzino.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
